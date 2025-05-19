@@ -22,3 +22,24 @@ git clone --depth 1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages   # passwall-packages
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall   # passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git package/openwrt-passwall2   # passwall2
+
+#smasrtdns
+WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
+mkdir $WORKINGDIR -p
+rm $WORKINGDIR/* -fr
+wget https://github.com/pymumu/openwrt-smartdns/archive/master.zip -O $WORKINGDIR/master.zip
+unzip $WORKINGDIR/master.zip -d $WORKINGDIR
+mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
+rmdir $WORKINGDIR/openwrt-smartdns-master
+rm $WORKINGDIR/master.zip
+
+LUCIBRANCH="lede" #更换此变量
+WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
+mkdir $WORKINGDIR -p
+rm $WORKINGDIR/* -fr
+wget https://github.com/pymumu/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
+unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
+mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
+rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
+rm $WORKINGDIR/${LUCIBRANCH}.zip
+
