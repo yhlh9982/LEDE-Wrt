@@ -1,20 +1,17 @@
 #!/bin/bash
-# Theme
+
 # luci-theme-neobird
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git package/otherapp/luci-theme-neobird
 # luci-theme-argon
-rm -rf package/lean/luci-theme-argon 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git  package/lean/luci-theme-argon-config
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/lean/luci-theme-argon
+git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
 git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
 git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherapp/luci-app-pushbot
-
-# Mentohust
+git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth 1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/otherapp/mentohust
-
-# UnblockNeteaseMusic
 git clone --depth 1 -b master  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic
 
 #科学插件
@@ -27,23 +24,18 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git p
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall   # passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git package/openwrt-passwall2   # passwall2
 
-#smasrtdns
-WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/openwrt-smartdns/archive/master.zip -O $WORKINGDIR/master.zip
-unzip $WORKINGDIR/master.zip -d $WORKINGDIR
-mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
-rmdir $WORKINGDIR/openwrt-smartdns-master
-rm $WORKINGDIR/master.zip
+#smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
-LUCIBRANCH="lede" #更换此变量
-WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
-unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
-mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
-rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
-rm $WORKINGDIR/${LUCIBRANCH}.zip
+#mosdns
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone --depth 1 https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
+git clone --depth 1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+
+#adguardhome
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
