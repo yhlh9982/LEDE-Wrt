@@ -7,6 +7,8 @@
 # 修改默认IP为192.168.30.1
 sed -i 's/192.168.1.1/192.168.30.1/g' package/base-files/files/bin/config_generate 
 
-# iStore
-#echo "src-git istore https://github.com/linkease/istore;main" >> feeds.conf.default
+#修改内核为6.12
+sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
+
+
 
