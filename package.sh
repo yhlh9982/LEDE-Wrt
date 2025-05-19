@@ -27,11 +27,15 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git package/o
 #smartdns
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
-git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone --depth 1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 #mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
-git clone --depth 1 https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
-git clone --depth 1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+#git clone --depth 1 https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
+#git clone --depth 1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
