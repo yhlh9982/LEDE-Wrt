@@ -1,16 +1,15 @@
 #!/bin/bash
-git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
-git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
-git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherapp/luci-app-pushbot
-
 # Theme
 # luci-theme-neobird
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git package/otherapp/luci-theme-neobird
-
 # luci-theme-argon
 rm -rf package/lean/luci-theme-argon 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git  package/lean/luci-theme-argon-config
+
+git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
+git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
+git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherapp/luci-app-pushbot
 
 # Mentohust
 git clone --depth 1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/otherapp/mentohust
