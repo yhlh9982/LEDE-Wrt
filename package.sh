@@ -10,7 +10,7 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config 
 git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
 git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter  #应用过滤(OAF)
 git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherapp/luci-app-pushbot #微信推送
-git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff  #关机
+git clone --depth 1 https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice  #关机
 git clone --depth 1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/otherapp/mentohust
 git clone --depth 1 -b master  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic  #解除网易云音乐播放限制
 
