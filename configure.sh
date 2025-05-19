@@ -1,6 +1,9 @@
 #!/bin/bash
 # Modify default system settings
 
+# iStore
+#echo "src-git istore https://github.com/linkease/istore;main" >> feeds.conf.default
+
 # 暂时回滚
 #sed -i '/^#src-git luci https:\/\/github.com\/coolsnowwolf\/luci$/s/^#//' feeds.conf.default && sed -i '/^src-git luci https:\/\/github.com\/coolsnowwolf\/luci\.git;openwrt-23\.05$/s/^/#/' feeds.conf.default
 
