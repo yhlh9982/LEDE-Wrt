@@ -21,26 +21,6 @@ echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >
 # iStore
 #echo "src-git istore https://github.com/linkease/istore;main" >> feeds.conf.default
 
-#smartdns
-WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/openwrt-smartdns/archive/master.zip -O $WORKINGDIR/master.zip
-unzip $WORKINGDIR/master.zip -d $WORKINGDIR
-mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
-rmdir $WORKINGDIR/openwrt-smartdns-master
-rm $WORKINGDIR/master.zip
-
-LUCIBRANCH="master" #更换此变量
-WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
-unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
-mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
-rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
-rm $WORKINGDIR/${LUCIBRANCH}.zip
-
 # 替换默认主题
 rm -rf package/lean/luci-theme-argon 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/lean/luci-theme-argon
