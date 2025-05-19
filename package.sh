@@ -7,7 +7,7 @@ git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherap
 # luci-theme-neobird
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git package/otherapp/luci-theme-neobird
 
-# 替换默认主题
+# luci-theme-argon
 rm -rf package/lean/luci-theme-argon 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git  package/lean/luci-theme-argon-config
