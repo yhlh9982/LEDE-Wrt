@@ -8,11 +8,11 @@ git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
-git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
-git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherapp/luci-app-pushbot
-git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter  #应用过滤(OAF)
+git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherapp/luci-app-pushbot #微信推送
+git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff  #关机
 git clone --depth 1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/otherapp/mentohust
-git clone --depth 1 -b master  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic
+git clone --depth 1 -b master  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic  #解除网易云音乐播放限制
 
 #科学插件
 git clone --depth 1 https://github.com/immortalwrt/homeproxy.git package/homeproxy   # homeproxy
@@ -35,7 +35,3 @@ find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone --depth 1 https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
 git clone --depth 1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-
-#adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-
