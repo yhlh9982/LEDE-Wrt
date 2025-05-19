@@ -13,8 +13,15 @@ git clone --depth 1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git pac
 # UnblockNeteaseMusic
 git clone --depth 1 -b master  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic
 
-# OpenClash
-git clone --depth 1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+#科学插件
+git clone --depth 1 https://github.com/immortalwrt/homeproxy.git package/homeproxy   # homeproxy
+git clone --depth 1 https://github.com/fw876/helloworld.git package/ssr-plus  # ssr-plus
+git clone --depth 1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash   # OpenClash
+git clone --depth 1 https://github.com/Thaolga/luci-app-nekoclash.git package/nekoclash   # nekoclash
+git clone --depth 1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/OpenWrt-nikki   # OpenWrt-nikki
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages   # passwall-packages
+git clone --depth 1 https://github.com/openwrt-passwall.git package/openwrt-passwall   # passwall
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git package/openwrt-passwall2   # passwall2
 
 #smartdns
 WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
