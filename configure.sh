@@ -11,7 +11,7 @@
 sed -i 's/192.168.1.1/192.168.30.1/g' package/base-files/files/bin/config_generate 
 
 #修改内核为6.12
-#sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
 
 
 
