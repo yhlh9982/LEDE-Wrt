@@ -1,8 +1,8 @@
 #!/bin/bash
 # luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
 git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter  #应用过滤(OAF)
@@ -10,7 +10,7 @@ git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot package/otherap
 git clone --depth 1 https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice  #关机
 git clone --depth 1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/otherapp/mentohust
 git clone --depth 1 https://github.com/feifan1113/luci-app-fileassistant.git package/luci-app-fileassistant
-git clone --depth 1 -b master  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic  #解除网易云音乐播放限制
+git clone --depth 1 -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/unblockneteasemusic  #解除网易云音乐播放限制
 
 #科学插件
 #git clone --depth 1 https://github.com/immortalwrt/homeproxy.git package/homeproxy   # homeproxy
