@@ -1,8 +1,8 @@
 #!/bin/bash
 # luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
-git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 git clone --depth 1 https://github.com/bigbugcc/OpenwrtApp package/otherapp/OpenwrtApp
 git clone --depth 1 https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter  #应用过滤(OAF)
@@ -32,7 +32,7 @@ mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
 rmdir $WORKINGDIR/openwrt-smartdns-master
 rm $WORKINGDIR/master.zip
 
-LUCIBRANCH="lede" #更换此变量
+LUCIBRANCH="master" #更换此变量
 WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
 mkdir $WORKINGDIR -p
 rm $WORKINGDIR/* -fr
